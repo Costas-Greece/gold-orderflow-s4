@@ -1,0 +1,14 @@
+# Copy to config.toml and edit. Every setting and its default is in s4/config.py.
+
+port = 7497            # TWS paper 7497, TWS live 7496, IB Gateway paper 4002, IB Gateway live 4001
+client_id = 41
+trade = false          # false = only log signals; true = send MGC orders
+risk_usd = 90.0        # $ lost when the stop is hit (sizes the number of MGC contracts)
+contract_month = ""    # "" = the active gold month (e.g. "202612" to force December)
+
+# strategy #4 filters (set both to false for the plain version of the strategy)
+drop_single_clusters = true
+skip_inside_value = true
+
+sessions = [[0, 7], [13, 19]]   # UTC hours with new entries (Asia, New York)
+losses_per_session = 2
